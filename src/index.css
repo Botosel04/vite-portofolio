@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+:root {
+  --body_background: white;
+  --text_color: #001b5e;
+  --text_color2: #001b5e;
+  --text_stone_400: rgb(168 162 158);
+  --text_stone_500: rgb(120 113 108);
+}
+
+[data-theme="dark"] {
+  --body_background: #282c34;
+  --text_color: white;
+  --text_color2: rgb(243, 137, 67);
+  --text_stone_400: rgb(255, 255, 255);
+  --text_stone_500: rgb(206, 206, 206);
+}

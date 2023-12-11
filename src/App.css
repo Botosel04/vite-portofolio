@@ -1,0 +1,19 @@
+.work {
+  background-color: var(--body_background);
+}
+
+.work div {
+  color: var(--text_color2);
+}
+
+.work-item .year {
+  background-color: var(--text_color2);
+}
+
+.work-item .duration {
+  color: var(--text_stone_400);
+}
+
+.work-item .details {
+  color: var(--text_stone_500);
+}

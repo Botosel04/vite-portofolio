@@ -4,6 +4,7 @@ import { Home } from "./components/Home";
 import Work from "./components/Work";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import "./App.css";
 
 function App() {
   return (

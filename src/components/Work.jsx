@@ -1,5 +1,7 @@
 import React from "react";
 import Workitem from "./Workitem";
+import { Sidenav } from "./Sidenav";
+import { FaDharmachakra } from "react-icons/fa";
 
 const data = [
   {
@@ -33,17 +35,19 @@ const data = [
 ];
 const Work = () => {
   return (
-    <div id="work" className="max-w-[1040px] m-auto md:pl-20 p-4 py-16">
-      <h1 className="text-4xl font-bold text-center text-[#001b5e]">Work</h1>
-      {data.map((item, idx) => (
-        <Workitem
-          key={idx}
-          year={item.year}
-          title={item.title}
-          duration={item.duration}
-          details={item.details}
-        />
-      ))}
+    <div className="work">
+      <div id="work" className="max-w-[1040px] m-auto md:pl-20 py-16 ">
+        <h1 className="text-4xl font-bold text-center pb-4 ">Work</h1>
+        {data.map((item, idx) => (
+          <Workitem
+            key={idx}
+            year={item.year}
+            title={item.title}
+            duration={item.duration}
+            details={item.details}
+          />
+        ))}
+      </div>
     </div>
   );
 };

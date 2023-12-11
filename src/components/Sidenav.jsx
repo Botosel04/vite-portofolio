@@ -7,12 +7,27 @@ import {
 } from "react-icons/ai";
 import { GrProjects } from "react-icons/gr";
 import { BsPerson } from "react-icons/bs";
+import { FaMoon } from "react-icons/fa";
+
 export const Sidenav = () => {
+  let mode = "light";
   const [nav, setNav] = useState(false);
   const handleNav = () => {
     setNav(!nav);
   };
+  const setDarkMode = () => {
+    mode = "dark";
+    document.querySelector("body").setAttribute("data-theme", "dark");
+  };
+  const setLightMode = () => {
+    mode = "light";
+    document.querySelector("body").setAttribute("data-theme", "light");
+  };
 
+  const toggleTheme = () => {
+    if (mode == "light") setDarkMode();
+    else setLightMode();
+  };
   return (
     <div>
       <AiOutlineMenu
@@ -97,6 +112,13 @@ export const Sidenav = () => {
           >
             <AiOutlineMail size={20} />
           </a>
+          <button
+            href="#contacts"
+            className="fixed bottom-4 rounded-full shadow-lg bg-gray-100 shadow-gray-400 m-2 p-3 cursor-pointer hover:scale-110 ease-in duration-200 "
+            onClick={toggleTheme}
+          >
+            <FaMoon size={20} />
+          </button>
         </div>
       </div>
     </div>
